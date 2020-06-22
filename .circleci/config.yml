@@ -56,6 +56,21 @@ jobs:
         path: ~/signer
     - run: pip install --user .[testing]
     - run: python -m pytest .
+  swift:
+    macos:
+      xcode: 11.4
+    steps:
+      - checkout:
+        path: ~/signer
+      - run:
+          name: Enter working directory
+          command: cd ~/signer/swift/tests/
+      - run:
+          name: Build
+          command: xcodebuild clean build
+      - run:
+          name: Run
+          command: ./build/Release/uonet-request-signer
 
 workflows:
   version: 2
@@ -67,3 +82,4 @@ workflows:
     - jvm
     - jvm-hebe
     - python
+    - swift
