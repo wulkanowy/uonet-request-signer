@@ -7,7 +7,6 @@
 
 import Foundation
 import Security
-import CommonCrypto
 
 class PKCS12 {
 	let privateKey: SecKey
@@ -38,7 +37,7 @@ class PKCS12 {
 		}
 		
 		guard let identityDictionaries = importResult as? [[String: Any]] else {
-			throw PKCS12.PKCS12Error.loadError(message: "Unable to load PKCS12")
+			throw PKCS12.PKCS12Error.loadError(message: "Unable to load the certificate")
 		}
 		
 		let identity = identityDictionaries[0][kSecImportItemIdentity as String] as! SecIdentity
@@ -64,30 +63,12 @@ class PKCS12 {
 	
 	public func signData(data: NSData) -> String? {
 		var signature: String?
-		
-		// Hash
-		let digestLength = Int(CC_SHA1_DIGEST_LENGTH)
-		let hashBytes = UnsafeMutablePointer<UInt8>.allocate(capacity: digestLength)
-		
-		CC_SHA1([UInt8](data), CC_LONG(data.count), hashBytes)
-		
-		// Sign
-		let blockSize = SecKeyGetBlockSize(privateKey)
-		var signatureBytes = [UInt8](repeating: 0, count: blockSize)
-		var signatureDataLength = blockSize
-		#if !os(macOS)
-		let status = SecKeyRawSign(privateKey, .PKCS1SHA1, hashBytes, digestLength, &signatureBytes, &signatureDataLength)
-		if (status == noErr) {
-			let data = Data(bytes: signatureBytes, count: signatureDataLength)
-			signature = data.base64EncodedString()
-		}
-		#else
 		var error: Unmanaged<CFError>?
+		
 		guard let signedData = SecKeyCreateSignature(privateKey, .rsaSignatureMessagePKCS1v15SHA1, data as CFData, &error) as Data? else {
 			return nil
 		}
 		signature = signedData.base64EncodedString()
-		#endif
 		
 		return signature
 	}

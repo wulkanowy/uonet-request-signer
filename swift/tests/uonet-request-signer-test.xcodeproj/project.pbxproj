@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0033794F24A0F78C00DF008A /* PKCS12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0033794E24A0F78C00DF008A /* PKCS12.swift */; };
 		005C0C5D24A0E21E006FDED2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005C0C5C24A0E21E006FDED2 /* main.swift */; };
-		005C0C6724A0E2BC006FDED2 /* PKCS12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005C0C6624A0E2BC006FDED2 /* PKCS12.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		005C0C5924A0E21E006FDED2 /* uonet-request-signer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "uonet-request-signer"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0033794E24A0F78C00DF008A /* PKCS12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PKCS12.swift; path = ../../PKCS12.swift; sourceTree = "<group>"; };
+		005C0C5924A0E21E006FDED2 /* uonet-request-signer-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "uonet-request-signer-test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		005C0C5C24A0E21E006FDED2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		005C0C6324A0E232006FDED2 /* uonet-request-signer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uonet-request-signer-Bridging-Header.h"; sourceTree = "<group>"; };
-		005C0C6624A0E2BC006FDED2 /* PKCS12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKCS12.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +43,7 @@
 		005C0C5024A0E21E006FDED2 = {
 			isa = PBXGroup;
 			children = (
-				005C0C5B24A0E21E006FDED2 /* uonet-request-signer */,
+				005C0C5B24A0E21E006FDED2 /* uonet-request-signer-test */,
 				005C0C5A24A0E21E006FDED2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,27 +51,26 @@
 		005C0C5A24A0E21E006FDED2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				005C0C5924A0E21E006FDED2 /* uonet-request-signer */,
+				005C0C5924A0E21E006FDED2 /* uonet-request-signer-test */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		005C0C5B24A0E21E006FDED2 /* uonet-request-signer */ = {
+		005C0C5B24A0E21E006FDED2 /* uonet-request-signer-test */ = {
 			isa = PBXGroup;
 			children = (
+				0033794E24A0F78C00DF008A /* PKCS12.swift */,
 				005C0C5C24A0E21E006FDED2 /* main.swift */,
-				005C0C6624A0E2BC006FDED2 /* PKCS12.swift */,
-				005C0C6324A0E232006FDED2 /* uonet-request-signer-Bridging-Header.h */,
 			);
-			path = "uonet-request-signer";
+			path = "uonet-request-signer-test";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		005C0C5824A0E21E006FDED2 /* uonet-request-signer */ = {
+		005C0C5824A0E21E006FDED2 /* uonet-request-signer-test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 005C0C6024A0E21E006FDED2 /* Build configuration list for PBXNativeTarget "uonet-request-signer" */;
+			buildConfigurationList = 005C0C6024A0E21E006FDED2 /* Build configuration list for PBXNativeTarget "uonet-request-signer-test" */;
 			buildPhases = (
 				005C0C5524A0E21E006FDED2 /* Sources */,
 				005C0C5624A0E21E006FDED2 /* Frameworks */,
@@ -82,9 +80,9 @@
 			);
 			dependencies = (
 			);
-			name = "uonet-request-signer";
+			name = "uonet-request-signer-test";
 			productName = "uonet-request-signer";
-			productReference = 005C0C5924A0E21E006FDED2 /* uonet-request-signer */;
+			productReference = 005C0C5924A0E21E006FDED2 /* uonet-request-signer-test */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 005C0C5424A0E21E006FDED2 /* Build configuration list for PBXProject "uonet-request-signer" */;
+			buildConfigurationList = 005C0C5424A0E21E006FDED2 /* Build configuration list for PBXProject "uonet-request-signer-test" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				005C0C5824A0E21E006FDED2 /* uonet-request-signer */,
+				005C0C5824A0E21E006FDED2 /* uonet-request-signer-test */,
 			);
 		};
 /* End PBXProject section */
@@ -127,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				005C0C5D24A0E21E006FDED2 /* main.swift in Sources */,
-				005C0C6724A0E2BC006FDED2 /* PKCS12.swift in Sources */,
+				0033794F24A0F78C00DF008A /* PKCS12.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +256,6 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "uonet-request-signer/uonet-request-signer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -275,7 +272,6 @@
 					"@loader_path/../Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "uonet-request-signer/uonet-request-signer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -283,7 +279,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		005C0C5424A0E21E006FDED2 /* Build configuration list for PBXProject "uonet-request-signer" */ = {
+		005C0C5424A0E21E006FDED2 /* Build configuration list for PBXProject "uonet-request-signer-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				005C0C5E24A0E21E006FDED2 /* Debug */,
@@ -292,7 +288,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		005C0C6024A0E21E006FDED2 /* Build configuration list for PBXNativeTarget "uonet-request-signer" */ = {
+		005C0C6024A0E21E006FDED2 /* Build configuration list for PBXNativeTarget "uonet-request-signer-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				005C0C6124A0E21E006FDED2 /* Debug */,

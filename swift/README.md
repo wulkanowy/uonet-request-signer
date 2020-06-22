@@ -1,9 +1,5 @@
 # PKCS12 data signing and key management in Swift 5.
 
-## Setup
-1. Add bridging header.
-2. Add `#import <CommonCrypto/CommonCrypto.h>` in the bridging header.
-
 ## Usage
 ```swift
 function sign(data: NSData) -> String? {
