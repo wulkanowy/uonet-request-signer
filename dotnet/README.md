@@ -1,6 +1,6 @@
 # Uonet+ request signer for .NET
 
-![Nuget](https://img.shields.io/nuget/v/UonetRequestSigner?style=flat-square)
+[![nuget](https://img.shields.io/nuget/v/UonetRequestSigner?style=flat-square)](https://www.nuget.org/packages/UonetRequestSigner/)
 
 ## Instalation
 
